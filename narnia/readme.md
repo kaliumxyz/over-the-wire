@@ -5,7 +5,7 @@ Unlike in prior games, every level seems to involve an executable these are stor
 
 ## level 0
 
-as alwasy the credentials of the frist level were given freely.
+as always the credentials of the frist level were given freely.
 username: narnia0
 password: narnia0
 
@@ -15,3 +15,15 @@ password: narnia0
 
 username: narnia1
 password: efeidiedae
+
+For this one you've gotta insert something into the env var EGG, the program will then read it and try to execute it.
+
+assumptions and decutions
+- EGG has to be a pointer to a location in memory
+- The program is already compiled so EGG has to be in binary like with narnia 0
+- Using gdb I was able to get a function on the stack to run, or at least I managed to get a floating point error when inserting an address that is on the stack (instead of a segfault or an "illegal operation).
+- it might just be running OP codes??? tbh I got no idea, do moar research by running it locally and modifying the file.
+
+I was able to look into the memory, and doing ASM like this is a mess.
+
+## level 2
