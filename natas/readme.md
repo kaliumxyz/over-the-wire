@@ -1210,6 +1210,77 @@ Username: <input name="username"><br>
 <? } ?> 
 ```
 
+## level 18
+
+addres:   http://natas18.natas.labs.overthewire.org/
+username: natas18
+password: xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP
+
+very simple brute force, I was heavily overthinking this one
+
+## level 19
+
+addres:   http://natas19.natas.labs.overthewire.org/
+username: natas19
+password: 4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs
+
+same shit but wit hhex
+
+## level 20
+
+addres:   http://natas20.natas.labs.overthewire.org/
+username: natas20
+password: eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF
+
+easy
+
+## level 21
+
+addres:   http://natas21.natas.labs.overthewire.org/
+Username: natas21
+Password: IFekPyrQXftziDEsUr3x21sYuahypdgJ
+
+again solved with simple script
+
+## level 22
+
+addres:   http://natas22.natas.labs.overthewire.org/
+Username: natas22
+Password: chG9fbe1Tq2eWVMgjYYD1MsfIvN461kJ
+
+make get request with parameters and ignore the redirect, thats it pretty much
+
+## level 23
+
+addres:   http://natas23.natas.labs.overthewire.org/
+Username: natas23
+Password: D0vlad33nQF0Hz2EP255TP5wSW9ZsRSE
+
+password has to be over 10 and contain I love you, a sting "1111iloveyou" would work.
+
+## level 24
+
+addres:   http://natas24.natas.labs.overthewire.org/
+Username: natas24
+Password: OsRmXFguozKpTZZ5X14zNO43379LZveg
+
+strcmp will return zero on error, it errors if you feed it an array
+
+## level 25
+
+addres:   http://natas25.natas.labs.overthewire.org/
+Username: natas25
+Password: GHF6X7YwACaYYssHVY05cFq83hRktl4c
+
+see script, had to make a request that got around their anti-path transeral thing by abusing their logger
+
+Had to write a php snippet that read out hte password in the useragent so it would be in a .log file that I could access using their lang field in the request, got around the file transferral by simple adding moar dots, they check for "../" so we put in ".../...//", which they change to "../"
+
+## level 26
+
+addres:   http://natas26.natas.labs.overthewire.org/
+Username: natas26
+Password: oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
 
 
 ## notes
