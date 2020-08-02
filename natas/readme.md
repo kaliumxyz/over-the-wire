@@ -1282,6 +1282,11 @@ addres:   http://natas26.natas.labs.overthewire.org/
 Username: natas26
 Password: oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
 
+## level 27
+
+addres:   http://natas27.natas.labs.overthewire.org/
+Username: natas27
+Password: oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T 
 
 ## notes
 
